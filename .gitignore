@@ -1,0 +1,12 @@
+# Environnement et secrets
+.venv/
+.env
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# Donnees lourdes ou sous licence : ne jamais pousser les PCAP
+*.pcap
+*.pcapng
+# Fichiers temporaires de Suricata
+results/tmp/
