@@ -1,0 +1,3 @@
+alert tcp any any -> any any (msg:"LAB Port scan SYN"; flags:S; \
+  detection_filter:track by_src, count 20, seconds 10; \
+  classtype:attempted-recon; sid:9000001; rev:1;)

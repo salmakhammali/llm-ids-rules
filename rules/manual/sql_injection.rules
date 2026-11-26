@@ -1,0 +1,4 @@
+alert http any any -> any any (msg:"LAB SQLi UNION SELECT dans l'URI"; \
+  flow:established,to_server; http.uri; content:"union"; nocase; \
+  content:"select"; nocase; distance:0; \
+  classtype:web-application-attack; sid:9000002; rev:1;)

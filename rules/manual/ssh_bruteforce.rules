@@ -1,0 +1,4 @@
+alert tcp any any -> any 22 (msg:"LAB SSH brute force (SYN repetes)"; \
+  flow:to_server; flags:S; \
+  detection_filter:track by_src, count 5, seconds 60; \
+  classtype:attempted-admin; sid:9000003; rev:1;)

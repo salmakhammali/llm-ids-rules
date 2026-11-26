@@ -1,0 +1,6 @@
+alert http any any -> any any (msg:"LAB User-Agent malveillant EvilBot"; \
+  flow:established,to_server; http.user_agent; content:"EvilBot"; \
+  classtype:trojan-activity; sid:9000004; rev:1;)
+alert http any any -> any any (msg:"LAB Beacon C2 sur /beacon"; \
+  flow:established,to_server; http.uri; content:"/beacon"; startswith; \
+  classtype:trojan-activity; sid:9000005; rev:1;)
