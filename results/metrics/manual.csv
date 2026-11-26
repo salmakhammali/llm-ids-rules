@@ -1,0 +1,5 @@
+run,attack_type,rules_file,tp,fn,fp,tn,tpr,fpr,precision,alerts_on_benign
+manual,c2_beacon,c2_beacon.rules,1,0,0,3,1.0,0.0,1.0,0
+manual,port_scan,port_scan.rules,2,0,0,3,1.0,0.0,1.0,0
+manual,sql_injection,sql_injection.rules,2,1,1,2,0.667,0.333,0.667,1
+manual,ssh_bruteforce,ssh_bruteforce.rules,1,0,0,3,1.0,0.0,1.0,0
