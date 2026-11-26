@@ -1,0 +1,12 @@
+Genere UNE regle Suricata 7 pour detecter le comportement decrit ci-dessous.
+
+Description du comportement :
+<<DESCRIPTION>>
+
+Resume du trafic observe (JSON extrait d'un PCAP) :
+<<FEATURES>>
+
+Contraintes :
+- une seule ligne, commencant par "alert"
+- le champ msg commence par "LLM "
+- utilise sid:<<SID>>; et rev:1;
