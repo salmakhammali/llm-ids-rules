@@ -1,0 +1,11 @@
+filename,label,type,source
+nmap_syn_scan.pcap,attack,port_scan,genere_local
+nmap_connect_scan.pcap,attack,port_scan,genere_local
+sqli_union.pcap,attack,sql_injection,genere_local
+sqli_union_all.pcap,attack,sql_injection,genere_local
+sqli_boolean.pcap,attack,sql_injection,genere_local
+ssh_bruteforce.pcap,attack,ssh_bruteforce,genere_local
+c2_beacon.pcap,attack,c2_beacon,genere_local
+browsing_local.pcap,benign,web_browsing,genere_local
+benign_tricky.pcap,benign,web_tricky,genere_local
+browsing_01.pcap,benign,web_browsing,capture_perso
