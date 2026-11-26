@@ -23,7 +23,7 @@ _client = None
 def _get_client():
     global _client
     if _client is None:
-        _client = genai.Client()  # lit GEMINI_API_KEY dans l'environnement
+        _client = genai.Client(http_options=types.HttpOptions(api_version="v1beta"))
     return _client
 
 
@@ -42,6 +42,9 @@ def ask(user_message, retries=4):
                     return resp.text
             except Exception as e:  # erreur reseau ou API
                 last = e
+                print(f"  [{model}] essai {attempt + 1} : {str(e)[:100]}")
+                if "404" in str(e) or "NOT_FOUND" in str(e):
+                    break  # modele inexistant : inutile de reessayer
                 time.sleep(3 * (attempt + 1))
     raise RuntimeError(f"Tous les modeles ont echoue : {last}")
 
